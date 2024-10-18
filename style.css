@@ -1,0 +1,279 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Increased opacity for better contrast */
+    z-index: -1;
+}
+
+/* Header Styling */
+header.header {
+    background-color: transparent; /* Let the background show through */
+    color: white;
+    padding: 30px 20px; /* Increased padding for breathing space */
+    margin-bottom: 30px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.5rem; /* Larger for more impact */
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+header p {
+    font-size: 1.5rem; /* Slightly larger for emphasis */
+    color: #ccc;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Better text contrast */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(244, 240, 240, 0.2); /* Solid blue background */
+    padding: 15px 0;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Ensures that the links are centered */
+    align-items: center;
+    flex-wrap: wrap;  /* Allows wrapping on smaller screens */
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    background-color: #010611;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    line-height: 50px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;  /* Prevents text from wrapping */
+}
+
+/* Hover effect for navbar links */
+.navbar ul li a:hover {
+    background-color: #041848;
+    color: #00f7ff;
+    border-radius: 20px;  /* Adds some rounded corners */
+}
+
+/* Responsive Navbar for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;  /* Stacks the links vertically on small screens */
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;  /* Adds vertical space between links */
+    }
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        padding: 20px;
+        text-align: left;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        z-index: 2;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 15px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2rem;
+        padding: 15px;
+        display: block;
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+}
+
+/* Portfolio Container */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* Flip Card Animation */
+.flip-card {
+    background-color: transparent;
+    width: 320px;
+    height: 420px;
+    perspective: 1000px;
+    margin: 20px;
+    transition: transform 0.5s ease, box-shadow 0.3s;
+}
+
+.flip-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.flip-card-front {
+    background-color: #444;
+    color: white;
+}
+
+.flip-card-back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Video Styling */
+.hover-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Card Images */
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Headings */
+h3 {
+    margin-top: 10px;
+    font-size: 1.6rem;
+    color: #eee;
+    font-weight: bold;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.footer .social-links a {
+    color: #fff;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #00f7ff;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editkaro.in Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Title and Subtitle -->
+    <header class="header">
+        <h1>Editkaro.in</h1>
+        <p>Your one-stop destination for social media marketing and professional video editing</p>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#" onclick="showCategory('all')">All Videos</a></li>
+                <li><a href="#" onclick="showCategory('short-form')">Short-form Videos</a></li>
+                <li><a href="#" onclick="showCategory('long-form')">Long-form Videos</a></li>
+                <li><a href="#" onclick="showCategory('gaming')">Gaming Videos</a></li>
+                <li><a href="#" onclick="showCategory('football-edits')">Football Edits</a></li>
+                <li><a href="#" onclick="showCategory('ecommerce')">eCommerce Ads</a></li>
+                <li><a href="#" onclick="showCategory('documentary')">Documentary Style</a></li>
+                <li><a href="#" onclick="showCategory('color-grading')">Color Grading</a></li>
+                <li><a href="#" onclick="showCategory('anime')">Anime Videos</a></li>
+                <li><a href="#" onclick="showCategory('ads')">Ads</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Portfolio Items Container -->
+    <div class="portfolio-container" id="portfolio-container">
+
+        <!-- Short Form Video Card -->
+        <div class="portfolio-item short-form" data-category="short-form">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="image1.jpg" alt="Short Video Thumbnail">
+                        <h3>Short-form Video</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <video controls muted class="hover-video">
+                            <source src="video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Long Form Video Card -->
+        <div class="portfolio-item long-form" data-category="long-form">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="image2.jpg" alt="Long Video Thumbnail">
+                        <h3>Long-form Video</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <video controls muted class="hover-video">
+                            <source src="video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gaming Video Card -->
+        <div class="portfolio-item gaming" data-category="gaming">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="image3.jpg" alt="Gaming Video Thumbnail">
+                        <h3>Gaming Video</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <video controls muted class="hover-video">
+                            <source src="video3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Football Edits Card -->
+        <div class="portfolio-item football-edits" data-category="football-edits">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="image4.jpg" alt="Football Video Thumbnail">
+                        <h3>Football Edits</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <video controls muted class="hover-video">
+                            <source src="video4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- eCommerce Ads Card -->
+        <div class="portfolio-item ecommerce" data-category="ecommerce">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="image1.jpg" alt="eCommerce Ads Thumbnail">
+                        <h3>eCommerce Ads</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <video controls muted class="hover-video">
+                            <source src="video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documentary Style Card -->
+        <div class="portfolio-item documentary" data-category="documentary">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="image2.jpg" alt="Documentary Style Video Thumbnail">
+                        <h3>Documentary Style</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <video controls muted class="hover-video">
+                            <source src="video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Grading Card -->
+        <div class="portfolio-item color-grading" data-category="color-grading">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="image3.jpg" alt="Color Grading Video Thumbnail">
+                        <h3>Color Grading</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <video controls muted class="hover-video">
+                            <source src="video3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anime Video Card -->
+        <div class="portfolio-item anime" data-category="anime">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="image4.jpg" alt="Anime Video Thumbnail">
+                        <h3>Anime Video</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <video controls muted class="hover-video">
+                            <source src="video4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ads Card -->
+        <div class="portfolio-item ads" data-category="ads">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="image1.jpg" alt="Ads Video Thumbnail">
+                        <h3>Ads</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <video controls muted class="hover-video">
+                            <source src="video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <p>© 2024 Editkaro.in | Built with ❤️ by Neha Kumari Singh</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/neha-kumari-singh-89385a24b/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/nks-19" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
